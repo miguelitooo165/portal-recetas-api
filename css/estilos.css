@@ -1,56 +1,180 @@
-/* Estilos básicos - versión inicial */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* =========================================
+   Portal de Recetas - Estilos
+   Mejora: interfaz moderna y responsive
+   ========================================= */
+
+:root {
+    --color-primario: #d35400;
+    --color-primario-oscuro: #a04000;
+    --color-fondo: #fdf6f0;
+    --color-tarjeta: #ffffff;
+    --color-texto: #2d2d2d;
+    --color-suave: #6b6b6b;
+    --radio: 14px;
+    --sombra: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+/* ---------- Encabezado ---------- */
 .encabezado {
-    background-color: #d35400;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
+.encabezado h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem;
+}
+
+.encabezado p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* ---------- Contenedor ---------- */
 .contenedor {
-    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
 }
 
-.buscador input {
-    padding: 8px;
-    width: 250px;
+/* ---------- Buscador ---------- */
+.buscador {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.buscador input,
+.buscador select {
+    padding: 12px 16px;
+    border: 2px solid #e5d5c8;
+    border-radius: 30px;
+    font-size: 1rem;
+    min-width: 260px;
+    outline: none;
+    background: white;
+}
+
+.buscador input:focus,
+.buscador select:focus {
+    border-color: var(--color-primario);
 }
 
 .buscador button {
-    padding: 8px 16px;
-    cursor: pointer;
-}
-
-.mensaje {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--color-primario);
+    color: white;
+    font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
+.buscador button:hover {
+    background-color: var(--color-primario-oscuro);
+}
+
+/* ---------- Mensajes ---------- */
+.mensaje {
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-suave);
+}
+
+/* ---------- Resultados en grid responsive ---------- */
 .resultados {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 22px;
 }
 
 .tarjeta {
-    width: 300px;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
+    background-color: var(--color-tarjeta);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
 }
 
 .tarjeta img {
     width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
 
+.tarjeta h3 {
+    margin: 14px 16px 6px;
+    font-size: 1.1rem;
+}
+
+.tarjeta p {
+    margin: 4px 16px;
+    font-size: 0.92rem;
+    color: var(--color-suave);
+}
+
+.tarjeta p:last-child {
+    margin-bottom: 16px;
+}
+
+/* ---------- Pie ---------- */
 .pie {
     text-align: center;
-    padding: 15px;
-    font-size: 14px;
-    color: #777;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: var(--color-suave);
+    border-top: 1px solid #eadfd6;
+    margin-top: 30px;
+}
+
+/* ---------- Responsive: móviles ---------- */
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 28px 16px;
+    }
+
+    .encabezado h1 {
+        font-size: 1.7rem;
+    }
+
+    .buscador {
+        flex-direction: column;
+    }
+
+    .buscador input,
+    .buscador select,
+    .buscador button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .resultados {
+        grid-template-columns: 1fr;
+    }
 }
