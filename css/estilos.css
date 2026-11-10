@@ -119,6 +119,32 @@ body {
     text-align: center;
     font-weight: bold;
     color: var(--color-suave);
+    max-width: 600px;
+    margin: 0 auto 18px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.mensaje:empty {
+    display: none;
+}
+
+.mensaje.info {
+    padding: 12px 16px;
+    background-color: #eaf3fb;
+    color: #1f5f8b;
+}
+
+.mensaje.error {
+    padding: 12px 16px;
+    background-color: #fdecea;
+    color: #b3261e;
+    border: 1px solid #f5c2bd;
+}
+
+.buscador button:disabled {
+    background-color: #c9a58c;
+    cursor: wait;
 }
 
 /* ---------- Resultados en grid responsive ---------- */
