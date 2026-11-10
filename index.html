@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Recetas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Portal de Recetas</h1>
+        <p>Busca recetas de todo el mundo usando la API de TheMealDB</p>
+    </header>
+
+    <main class="contenedor">
+        <form id="formBusqueda" class="buscador">
+            <input type="text" id="txtNombre" placeholder="Ej: chicken, pasta, soup">
+            <button type="submit" id="btnBuscar">Buscar</button>
+        </form>
+
+        <p id="mensaje" class="mensaje"></p>
+
+        <section id="resultados" class="resultados"></section>
+    </main>
+
+    <footer class="pie">
+        Ficha 3538620 · Técnico en Programación de Software - SENA
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Configuraciones y secretos (NUNCA subir)
+.env
+config.local.php
+
+# Dependencias
+vendor/
+node_modules/
+
+# Archivos del sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/

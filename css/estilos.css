@@ -1,0 +1,56 @@
+/* Estilos básicos - versión inicial */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.encabezado {
+    background-color: #d35400;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor {
+    padding: 20px;
+}
+
+.buscador input {
+    padding: 8px;
+    width: 250px;
+}
+
+.buscador button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.mensaje {
+    font-weight: bold;
+}
+
+.resultados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tarjeta {
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.tarjeta img {
+    width: 100%;
+}
+
+.pie {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #777;
+}
