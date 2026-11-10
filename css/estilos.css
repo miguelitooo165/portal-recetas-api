@@ -92,6 +92,28 @@ body {
     background-color: var(--color-primario-oscuro);
 }
 
+/* ---------- Filtros ---------- */
+.filtros {
+    margin-top: -8px;
+}
+
+.contador {
+    text-align: center;
+    color: var(--color-suave);
+    font-size: 0.95rem;
+    margin: 0 0 18px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #fbe3d3;
+    color: var(--color-primario-oscuro);
+    font-size: 0.78rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
 /* ---------- Mensajes ---------- */
 .mensaje {
     text-align: center;
